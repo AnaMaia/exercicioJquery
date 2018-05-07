@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#mostra").hide();
+
+
+            $("#oculta").click(function(){
+                $(".preto").hide();
+                $("#oculta").hide();
+                $("#mostra").show();
+            });
+
+            $("#mostra").click(function(){
+                $(".preto").show();
+                $("#oculta").show();
+                $("#mostra").hide();
+            });
+
+        });
+
+    </script>
+    <title>exercicio Jquery</title>
+</head>
+<body>
+<p>primeiro parágrafo</p>
+<div class="preto">
+    <p>parágrafo da meioca</p>
+</div>
+
+<p>segundo parágrafo</p>
+<button id="mostra">mostra</button>
+<button id="oculta">oculta</button>
+
+
+
+</body>
+</html>
