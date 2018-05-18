@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jquery3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //apenas testando o Jquery
+          // alert('Jquery funcionou');
+
+            //ao clicar em qualquer li
+           $("#abas ul li").click(function() {
+
+               //remove a class de todos os li
+               $("#abas ul li").removeClass("selecionado");
+
+               //adiciona a class apenas no clicado
+               $(this).addClass("selecionado");
+
+               //descobrir o id de quem cliquei
+
+              var meuId = $(this).attr("id");
+              $(".conteudo").hide();
+              $("."+meuId).show();
+           });
+        });
+    </script>
+</head>
+<body>
+
+<div id="abas">
+    <ul>
+        <li id="aba1" class="selecionado">aba 1</li>
+        <li id="aba2">aba 2</li>
+        <li id="aba3">aba 3</li>
+    </ul>
+</div>
+
+<div id="conteudos">
+    <div class="conteudo aba1">
+        conteudo 1
+    </div>
+    <div class="conteudo aba2">
+        conteudo 2
+    </div>
+    <div class="conteudo aba3">
+        conteudo 3
+    </div>
+</div>
+
+
+
+</body>
+</html>
